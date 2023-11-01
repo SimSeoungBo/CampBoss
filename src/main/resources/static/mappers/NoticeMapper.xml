@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.notice.NoticeMapper">
+   <resultMap type="com.example.demo.notice.Notice" id="NoticeResult">
+      <result column="notice_num" property="notice_num" />
+      <result column="notice_name" property="notice_name" />
+      <result column="notice_info" property="notice_info" />
+      <result column="notice_id" property="notice_id" />
+      <result column="notice_date" property="notice_date" />
+      <result column="notice_like" property="notice_like" />
+      <result column="notice_hate" property="notice_hate" />
+   </resultMap>
+   
+   <insert id="insert" parameterType="com.example.demo.notice.Notice">
+      insert into noticeboard
+      values(#{notice_num}, #{notice_name}, #{notice_info}, #{notice_id}, sysdate, 0, 0) 
+   </insert>
+   
+   <select id="select" resultMap="NoticeResult" 
+   parameterType="String">
+      select * from noticeboard where notice_id = #{notice_id}
+   </select >
+   
+   <select id="selectByNum" parameterType="int" 
+   resultMap="NoticeResult">
+      select * from noticeboard where notice_num=#{notice_num}
+   </select>
+
+   <select id="selectAll" resultMap="NoticeResult">
+      select * from noticeboard order by notice_num
+   </select>
+   
+   <update id="update" parameterType="com.example.demo.notice.Notice">
+      update noticeboard set notice_name=#{notice_name}, notice_info=#{notice_info} 
+       where notice_num = #{notice_num}
+   </update>
+   
+   	<update id="uplike">
+		UPDATE noticeboard SET notice_like = notice_like + 1 WHERE notice_num = #{notice_num}
+	</update>
+	
+	<update id="uphate">
+		UPDATE noticeboard SET notice_hate = notice_hate + 1 WHERE notice_num = #{notice_num}
+	</update>
+	
+   
+   <delete id="delete" parameterType="int">
+      delete noticeboard where notice_num=#{notice_num}
+   </delete>
+   
+   <select id="getNum" resultType="int">
+      select seq_noticeboard.nextval from dual
+   </select>
+
+</mapper>

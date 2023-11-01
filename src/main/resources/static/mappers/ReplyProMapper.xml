@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repro.ReproMapper">
+	<resultMap type="com.example.demo.repro.Repro" id="repro">
+		<result property="num" column="num" />
+		<result property="repro_num" column="repro_num" />
+		<result property="repro_content" column="repro_content" />
+		<result property="repro_writer_id" column="repro_writer_id" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.example.demo.repro.Repro">
+		insert into reply_pro values(seq_reply_pro.nextval, #{repro_num}, #{repro_content}, #{repro_writer_id})
+	</insert>
+	<select id="select" resultMap="repro" parameterType="int">
+		select * from reply_pro where num=#{num}
+	</select>
+	<select id="selectByrepro_num" resultMap="repro">
+		select * from reply_pro where repro_num=#{repro_num}
+	</select>
+
+	<delete id="delete" parameterType="int">
+		delete reply_pro where num=#{num}
+	</delete>
+</mapper>

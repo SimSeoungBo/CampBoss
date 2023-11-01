@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.board.BoardMapper">
+	
+	<resultMap type="com.example.demo.board.Board" id="BoardResult">
+		
+		<result column="board_num" property="board_num" />
+		<result column="board_name" property="board_name" />
+		<result column="board_addr" property="board_addr" />
+		<result column="board_info" property="board_info" />
+		<result column="board_id" property="board_id" />
+		<result column="board_date" property="board_date" />
+		<result column="board_like" property="board_like" />
+		<result column="board_hate" property="board_hate" />
+		<result column="boardcategory1_id" property="boardcategory1_id" />
+		<result column="boardcategory2_id" property="boardcategory2_id" />
+		<result column="boardcategory3_id" property="boardcategory3_id" />
+		<result column="cbboard_hit" property="cbboard_hit"/>
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.example.demo.board.Board">
+		insert into cbboard
+		values(#{board_num}, #{board_name}, #{board_addr}, #{board_info}, #{board_id}, sysdate, 0, 0, 
+		#{boardcategory1_id}, #{boardcategory2_id}, #{boardcategory3_id},0) 
+	</insert>
+	
+	<select id="select" resultMap="BoardResult" 
+	parameterType="String">
+		select * from cbboard where board_id = #{board_id}
+	</select >
+	
+	<select id="selectByNum" parameterType="int" 
+	resultMap="BoardResult">
+		select * from cbboard where board_num=#{board_num}
+	</select>
+	
+	<select id="selectByName" parameterType="String" 
+	resultMap="BoardResult">
+		select * from cbboard where board_name=#{board_name}  order by board_num
+	</select>
+	
+	
+	<select id="selectByBoardid" parameterType="String" 
+	resultMap="BoardResult">
+		select * from cbboard where board_id=#{board_id}  order by board_num
+	</select>
+	
+	<select id="selectByC1" parameterType="int" 
+	resultMap="BoardResult">
+		select * from cbboard where boardcategory1_id = #{boardcategory1_id}  order by board_num
+	</select>
+	
+	<select id="selectByC2" parameterType="int" 
+	resultMap="BoardResult">
+		select * from cbboard 
+		where boardcategory2_id = #{boardcategory2_id}  order by board_num
+	</select>
+	
+	<select id="selectByC3" parameterType="int" 
+	resultMap="BoardResult">
+		select * from cbboard
+		where boardcategory3_id = #{boardcategory3_id}  order by board_num
+	</select>
+	
+	<select id="selectAll" resultMap="BoardResult">
+		select * from cbboard order by board_num
+	</select>
+	
+	<update id="update" parameterType="com.example.demo.board.Board">
+		update cbboard set board_name=#{board_name}, board_addr=#{board_addr}, board_info=#{board_info}
+		 where board_num = #{board_num}
+	</update>
+	
+	<update id="uplike">
+		UPDATE cbboard SET board_like = board_like + 1 WHERE board_num = #{board_num}
+	</update>
+	
+	<update id="uphate">
+		UPDATE cbboard SET board_hate = board_hate + 1 WHERE board_num = #{board_num}
+	</update>
+	
+	
+	<delete id="delete" parameterType="int">
+		delete cbboard where board_num=#{board_num}
+	</delete>
+	
+	<update id="editCbboard_hit">
+		update cbboard set cbboard_hit=cbboard_hit+1 where board_num = #{board_num}
+	</update>
+	
+	<select id="getNum" resultType="int">
+		select seq_cbboard.nextval from dual
+	</select>
+
+</mapper>

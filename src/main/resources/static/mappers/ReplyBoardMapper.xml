@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.reply.RepMapper">
+	<resultMap type="com.example.demo.reply.Reply" id="rep">
+		<result property="num" column="num" />
+		<result property="re_num" column="re_num" />
+		<result property="content" column="content" />
+		<result property="writer_id" column="writer_id" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.example.demo.reply.Reply">
+		insert into reply_board values(seq_reply_board.nextval, #{re_num}, #{content}, #{writer_id})
+	</insert>
+	<select id="select" resultMap="rep" parameterType="int">
+		select * from reply_board where num=#{num}
+	</select>
+	<select id="selectByre_num" resultMap="rep">
+		select * from reply_board where re_num=#{re_num}
+	</select>
+
+	<delete id="delete" parameterType="int">
+		delete reply_board where num=#{num}
+	</delete>
+</mapper>

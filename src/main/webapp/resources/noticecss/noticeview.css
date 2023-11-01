@@ -1,0 +1,114 @@
+
+
+
+.info {
+	width: 1400px;
+	height: 900px;
+	text-align: center;
+	font-size: 30px;
+	margin-left: 150px;
+	margin-top: 50px;
+	resize: none;
+	border: 5px double black;
+	border-radius: 5px;
+	outline: none;
+}
+
+
+
+.name{
+	margin-top: 100px;
+	text-align: center;
+	border: none;
+	font-size: 35px;
+}
+
+.seller-title{
+	font-size: 20px;
+	float: right;
+	margin-right: 20px;
+}
+
+.seller{
+	float: right;
+}
+
+/* 수정 css */
+
+h3{
+	text-align: center;
+	font-size: 40px;
+}
+
+.title{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 32px;
+}
+
+.title1{
+	margin-left: 650px;
+	text-align: center;
+	font-size: 23px;
+	width: 400px;
+	height: 60px;
+}
+
+.btn {
+float: right;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  
+}
+.btn:hover {
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+.btn1{
+	width: 60px;
+	height: 30px;
+	font-size: 19px;
+	margin-left: 1370px;
+	margin-right: 10px;
+	
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: none;
+}
+
+
+
+.btn2{
+	width: 60px;
+	height: 30px;
+	font-size: 19px;
+	margin-left: 100px;
+	margin-right: 10px;
+	background-color: transparent;
+	border: none;
+}
+
+
+footer{
+	clear: both;
+	width: 103%;
+	height: 80px;
+	margin-top: 500px;
+	margin-bottom: -100px;
+	margin-left: -50px;
+	margin-right: 100px;
+	background-color: #73685d;
+}
+
+
+
+footer .copyright p{
+	font-size: 17px;
+	color: black;
+	text-align: center;
+	padding: 32px 0 0 40px;
+}

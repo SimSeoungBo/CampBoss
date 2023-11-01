@@ -1,0 +1,102 @@
+@charset "EUC-KR";
+
+
+.bodymenu {
+  margin-top: 17.6px;
+  padding-top: 17.6px;
+}
+
+.nav-bar {
+  height: 85px;
+  background: transparent; 
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 85px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.brand a img {
+  max-height: 100px;
+}
+
+.brand a,
+.brand a:visited {
+  color: #000000; 
+  text-decoration: none;
+  font-style:italic;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 85px;
+  background: transparent;
+  color: #000000; 
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: rgb(255, 255, 255); 
+  color: #000000; 
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent; 
+  height: 85px;
+  width: 85px;
+}
+

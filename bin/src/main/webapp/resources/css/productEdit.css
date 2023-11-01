@@ -1,0 +1,180 @@
+@charset "EUC-KR";
+
+/*제목 css*/
+h3{
+	text-align: center;
+	font-size: 35px;
+	font-style: italic;
+}
+
+
+/*제품이름 css*/
+/*제품이름 css*/
+
+.name-title{
+	font-size: 20px;
+
+	margin-right: 30px;
+	margin-top: 50px;
+	text-align: center;
+	font-style: italic;
+}
+
+.name{
+	margin-left: 630px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 400px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+}
+
+/*제품설명 css*/
+
+.info-title {
+	font-size: 20px;
+	margin-right: 30px;
+	margin-top: 50px;
+	font-style: italic;
+	text-align: center;
+}
+
+.info{
+	margin-left: 630px;
+	width: 400px;
+	height: 400px;
+	border-radius: 5px;
+	resize: none;
+	border: 1px solid #d9d6d6;
+	font-family: 'Montserrat', 'Pretendard', sans-serif;
+	box-shadow: 0 0 4px black ;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/*제품가격 css*/
+
+.price-title {
+	margin-right: 30px;
+	margin-top: 50px;
+	font-size: 20px;
+	text-align: center;
+	font-style: italic;
+}
+
+.price{
+	margin-left: 40%;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 30px;
+	text-align: center;
+}
+
+
+/*판매자 css*/
+.seller-title {
+	font-size: 20px;
+	margin-right: 30px;
+	margin-top: 50px;
+	text-align: center;
+	font-style: italic;
+}
+
+.seller{
+	margin-left: 40%;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 30px;
+	text-align: center;
+}
+
+
+/*등록취소 버튼 css*/
+
+.submit{
+	margin-left: 40%;
+	margin-top: 40px;
+    margin-bottom: 30px;
+    background-color:transparent;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 150px;
+	height: 25px;
+}
+
+
+.reset{
+	margin-top: 40px;
+    margin-bottom: 30px;
+    background-color:transparent;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 150px;
+	height: 25px;
+	text-align: center;
+}
+
+
+
+/*이미지 css*/
+
+
+
+.img-head{
+	
+	position: relative;
+	margin-left: 630px;
+	margin-top: 20px;
+	width: 400px;
+	height: 400px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+}
+
+.img-body1{
+	
+	margin-left: 680px;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 100px;
+	height: 100px;
+}
+
+.img-body2{
+
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 100px;
+	height: 100px;
+}
+
+.img-body3{
+
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 100px;
+	height: 100px;
+}
+
+
+.not-img{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 20px;
+}

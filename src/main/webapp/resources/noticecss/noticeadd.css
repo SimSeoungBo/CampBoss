@@ -1,0 +1,78 @@
+h3{
+	text-align: center;
+	font-size: 40px;
+}
+
+.title{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 32px;
+}
+
+.title1{
+	margin-left: 650px;
+	text-align: center;
+	font-size: 23px;
+	width: 400px;
+	height: 60px;
+}
+
+.info {
+	width: 1200px;
+	height: 700px;
+
+	border: 5px solid #73685d;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 100px;
+	margin-left: 280px;
+	resize: none;
+	border-radius: 2px;
+}
+
+.seller1{
+	border: none;
+}
+
+.line1 {
+	
+	border-top: 4px solid #73685d;	
+}
+
+.btn {
+	float: left;
+	margin-top: 100px;
+	margin-left: 520px;
+  	transition: all 0.3s ease;
+  	font-size: 20px;
+  	width: 100px;
+  	height: 60px;
+}
+.btn:hover {
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+}
+
+
+footer{
+	clear: both;
+	width: 103%;
+	height: 80px;
+	margin-top: 300px;
+	margin-bottom: -100px;
+	margin-left: -50px;
+	margin-right: 100px;
+	background-color: #73685d;
+}
+
+
+
+footer .copyright p{
+	font-size: 17px;
+	color: black;
+	text-align: center;
+	padding: 32px 0 0 40px;
+}

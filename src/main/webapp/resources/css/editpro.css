@@ -1,0 +1,104 @@
+@charset "EUC-KR";
+
+
+
+h3{
+	text-align: center;
+	font-size: 35px;
+	font-style: italic;
+	margin-bottom: 70px;
+}
+
+.div-form{
+	margin-top: 10px;
+	 border-radius: 4px;
+ 	 border: 1px solid #d9d6d6;
+  	 color: #383838;
+}
+
+label {
+  font-weight: bold; /* 글꼴을 굵게 설정 */
+  color: #525252; /* 글자 색상 설정 */
+  margin-left: 35%;
+  margin-top: 3%;
+}
+
+.in{
+	align-content: center;
+	
+}
+
+.img1 {
+	align-content: center;
+	 margin-left: 40%;
+
+}
+
+.img2 {
+	margin-top: 2%;
+    margin-left: 40%;
+    
+}
+
+.txt {
+	
+	text-align: center;
+	
+}
+
+#myTextarea {
+  width: 400px; /* 가로 크기 */
+  height: 300px; /* 세로 크기 */
+  resize: none;
+}	
+
+.form-control{
+	
+  width: 20%;
+  height: 40px;
+  box-sizing: border-box;
+  margin-left: 35%;
+  margin-top: 2%;
+  
+  padding: 5px 0 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d6d6;
+  color: #383838;
+  background-color: #ffffff;
+  font-family: 'Montserrat', 'Pretendard', sans-serif;
+  margin-top: 10px;
+}
+
+.form-control2{
+	
+  width: 9%;
+  height: 40px;
+  box-sizing: border-box;
+  margin-left: 35%;
+  margin-top: 2%;
+  
+  padding: 5px 0 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d6d6;
+  color: #383838;
+  background-color: #ffffff;
+  font-family: 'Montserrat', 'Pretendard', sans-serif;
+  margin-top: 10px;
+}
+
+.form-control3{
+	
+  width: 9%;
+  height: 40px;
+  box-sizing: border-box;
+  margin-left: 2%;
+  margin-top: 2%;
+  
+  padding: 5px 0 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d6d6;
+  color: #383838;
+  background-color: #ffffff;
+  font-family: 'Montserrat', 'Pretendard', sans-serif;
+  margin-top: 10px;
+}

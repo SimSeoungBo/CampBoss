@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.seller.ProductMapper">
+	<resultMap type="com.example.demo.seller.Product" id="ProdResult">
+		<result column="num" property="num" />
+		<result column="name" property="name" />
+		<result column="info" property="info" />
+		<result column="price" property="price" />
+		<result column="seller_id" property="seller_id" />
+		<result column="category1_id" property="category1_id" />
+		<result column="category2_id" property="category2_id" />
+		<result column="category3_id" property="category3_id" />
+	</resultMap>
+	<insert id="insert" parameterType="com.example.demo.seller.Product">
+		insert into cbproduct
+		values(#{num}, #{name}, #{info}, #{price},
+		#{seller_id}, #{category1_id}, #{category2_id}, #{category3_id}) 
+	</insert>
+	
+	<select id="select" resultMap="ProdResult" 
+	parameterType="String">
+		select * from cbproduct where seller_id = #{seller_id}
+	</select >
+	
+	<select id="selectByNum" parameterType="int" 
+	resultMap="ProdResult">
+		select * from cbproduct where num=#{num}
+	</select>
+	
+	<select id="selectByName" parameterType="String" 
+	resultMap="ProdResult">
+		select * from cbproduct where name=#{name}  order by num
+	</select>
+	
+	<select id="selectByPrice" parameterType="java.util.Map" 
+	resultMap="ProdResult">
+		select * from cbproduct where price between #{min} and #{max}  order by num
+	</select>
+	
+	<select id="selectBySellerId" parameterType="String" 
+	resultMap="ProdResult">
+		select * from cbproduct where seller_id=#{seller_id}  order by num
+	</select>
+	
+	<select id="selectByC1" parameterType="int" 
+	resultMap="ProdResult">
+		select * from cbproduct where category1_id = #{category1_id}  order by num
+	</select>
+	
+	<select id="selectByC2" parameterType="int" 
+	resultMap="ProdResult">
+		select * from cbproduct 
+		where category2_id = #{category2_id}  order by num
+	</select>
+	
+	<select id="selectByC3" parameterType="int" 
+	resultMap="ProdResult">
+		select * from cbproduct 
+		where category3_id = #{category3_id}  order by num
+	</select>
+	
+	<select id="selectAll" resultMap="ProdResult">
+		select * from cbproduct order by num
+	</select>
+	
+	<update id="update" parameterType="com.example.demo.seller.Product">
+		update cbproduct set name=#{name},  info=#{info},  price=#{price}
+		 where num = #{num}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete cbproduct where num=#{num}
+	</delete>
+	
+	<select id="getNum" resultType="int">
+		select seq_cbproduct.nextval from dual
+	</select>
+
+</mapper>

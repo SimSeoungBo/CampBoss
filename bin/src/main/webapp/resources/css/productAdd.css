@@ -1,0 +1,121 @@
+@charset "EUC-KR";
+
+
+/*제목 css*/
+h3{
+	text-align: center;
+	font-size: 35px;
+	font-style: italic;
+}
+
+
+/*카테고리 css*/
+.box {
+
+  width: 30%;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 40px;
+  padding: 5px 0 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d6d6;
+  color: #383838;
+  background-color: #ffffff;
+  font-family: 'Montserrat', 'Pretendard', sans-serif;
+  box-shadow: 0 0 4px black ;
+  font-style: italic;
+}
+
+/*각항목 제목 css*/
+p{
+	margin-top: 50px;
+	text-align: center;
+	font-style: italic;
+}
+
+/*제품이름 css*/
+.name{
+	
+	margin-left: 40%;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 30px;
+}
+
+
+/*제품설명 css*/
+.info{
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	resize: none;
+	border: 1px solid #d9d6d6;
+	margin-left: 40%;
+	font-family: 'Montserrat', 'Pretendard', sans-serif;
+	box-shadow: 0 0 4px black ;
+}
+
+/*제품가격 css*/
+
+.price{
+	margin-left: 40%;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 30px;
+}
+
+
+/*판매자 css*/
+
+.seller{
+	margin-left: 40%;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 30px;
+}
+
+/*제품이미지 css*/
+
+.upload-name {
+    margin-left: 40%;
+    margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 300px;
+	height: 25px;
+}
+
+/*등록취소 버튼 css*/
+
+.submit{
+	margin-left: 40%;
+	margin-top: 40px;
+    margin-bottom: 10px;
+    background-color:transparent;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 150px;
+	height: 25px;
+}
+
+
+.reset{
+	margin-top: 40px;
+    margin-bottom: 10px;
+    background-color:transparent;
+	border-radius: 5px;
+	border: 1px solid #d9d6d6;
+	box-shadow: 0 0 4px black ;
+	width: 150px;
+	height: 25px;
+}
+
+
